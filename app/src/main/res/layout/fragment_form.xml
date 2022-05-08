@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="17sp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_light"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:hint="Enter Your Name"
+        android:background="@drawable/edittext_bg"
+        android:fontFamily="@font/poppins_light"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        android:textSize="17sp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins_light"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your  Phone"
+        android:padding="15dp"
+        android:background="@drawable/edittext_bg"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="17sp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins_light"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Email"
+        android:padding="15dp"
+        android:background="@drawable/edittext_bg"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose Your Gender"
+        android:fontFamily="@font/poppins_light"
+        android:layout_marginTop="15dp"
+        />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Male"
+        android:fontFamily="@font/poppins_light"
+        />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Female"
+        android:fontFamily="@font/poppins_light"
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:backgroundTint="@color/black"
+        android:text="Submit"
+
+        />
+
+
+
+
+
+</LinearLayout>
