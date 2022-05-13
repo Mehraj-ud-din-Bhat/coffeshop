@@ -10,47 +10,103 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="300dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/one"
-
-
-                />
-
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="300dp"
-                android:layout_marginTop="10dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/two"
-                />
-
-
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:layout_marginTop="10dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/three"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/one"
+                    android:scaleType="fitXY"
 
-                />
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/coffe_one"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    />
+
+            </LinearLayout>
 
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="600dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/four"
-                android:adjustViewBounds="true"
-                />
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/two"
+                    android:scaleType="fitXY"
 
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/coffe_two"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/three"
+                    android:scaleType="fitXY"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/coffe_three"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/four"
+                    android:scaleType="fitXY"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/coffe_four"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    />
+
+            </LinearLayout>
 
         </LinearLayout>
 

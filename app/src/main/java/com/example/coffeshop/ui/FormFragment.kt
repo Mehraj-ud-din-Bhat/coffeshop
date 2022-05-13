@@ -1,10 +1,14 @@
 package com.example.coffeshop.ui
 
+import android.content.Context
+import android.content.DialogInterface
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import com.example.coffeshop.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -18,16 +22,16 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class FormFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    lateinit var  name: EditText
+    lateinit var  email: EditText
+    lateinit var  phone: EditText
+    lateinit var  male : RadioButton
+    lateinit var  female:RadioButton
+    lateinit var  submit:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onCreateView(
@@ -35,26 +39,89 @@ class FormFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_form, container, false)
+        val v= inflater.inflate(R.layout.fragment_form, container, false)
+        name=v.findViewById(R.id.name)
+        email=v.findViewById(R.id.email)
+        phone=v.findViewById(R.id.phone)
+        male=v.findViewById(R.id.male)
+        female=v.findViewById(R.id.female)
+        submit=v.findViewById(R.id.submit)
+
+        return  v;
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment FormFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            FormFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        submit.setOnClickListener {
+            if(validate())
+            {
+               showMessage("Thanks \nYour form has been submitted");
             }
+        }
+
+        male.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { compoundButton, b ->
+
+           if(b)
+           {
+               female.isChecked=false
+           }
+
+
+        })
+
+        female.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { compoundButton, b ->
+
+            if(b)
+            {
+                male.isChecked=false
+            }
+
+
+        })
     }
+
+    fun validate():Boolean
+    {
+        if(name.text.toString().isEmpty())
+        {
+            showToast("Please enter your name")
+            return  false;
+        }
+
+        if(phone.text.toString().isEmpty())
+        {
+            showToast("Please enter your phone")
+            return  false;
+        }
+
+
+        if(email.text.toString().isEmpty())
+        {
+            showToast("Please enter your email")
+            return  false;
+        }
+
+        if(!male.isChecked && !female.isChecked)
+        {
+            showToast("Please select gender")
+            return  false;
+        }
+
+        return  true
+    }
+
+    fun showToast(msg:String)
+    {
+        Toast.makeText(activity,msg,Toast.LENGTH_LONG).show()
+    }
+
+    private fun showMessage(message: String) {
+        AlertDialog.Builder(activity as Context)
+            .setMessage(message)
+            .setPositiveButton("OK",DialogInterface.OnClickListener { dialogInterface, i ->  })
+
+            .create()
+            .show()
+    }
+
 }

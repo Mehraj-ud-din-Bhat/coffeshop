@@ -31,10 +31,11 @@
                 android:text="Name"
                 android:textSize="17sp"
                 android:layout_marginTop="15dp"
-                android:textColor="@color/black"
+
                 android:fontFamily="@font/poppins_light"
                 />
             <EditText
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
@@ -53,6 +54,7 @@
                 />
 
             <EditText
+                android:id="@+id/phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Your  Phone"
@@ -69,6 +71,7 @@
                 android:fontFamily="@font/poppins_light"
                 />
             <EditText
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Your Email"
@@ -85,6 +88,7 @@
                 />
 
             <RadioButton
+                android:id="@+id/male"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Male"
@@ -92,6 +96,7 @@
                 />
 
             <RadioButton
+                android:id="@+id/female"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Female"
@@ -100,6 +105,7 @@
 
 
             <Button
+                android:id="@+id/submit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"

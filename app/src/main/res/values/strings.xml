@@ -16,4 +16,16 @@ Saturday 9am–2pm\n\n
 Address: 114 Hollyhedge Rd, West Bromwich B71 3AH
 
 </string>
+    
+    <string name="coffe_one">Black Coffee\nPrice:  $2</string>
+
+    <string name="coffe_two">Coffee Latte\nPrice:  $2</string>
+
+    <string name="coffe_three">Expresso\nPrice:  $2</string>
+
+
+    <string name="coffe_four">
+    Cappuccino\n
+        Price:  $2
+    </string>
 </resources>
