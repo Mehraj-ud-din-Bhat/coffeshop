@@ -5,7 +5,14 @@
 
     <string name="about">Our Signature Blend
 Our iconic Signature Blend is the perfect combination and balance of delicate Arabica and strong Robusta beans, precisely slow roasted for a minimum of 18 minutes to ensure the beans keep their hearty flavour, rich aroma, and smooth taste.\n
-        Hours-\n
+
+
+
+</string>
+
+
+    <string name="timing">
+          Hours-\n
 Sunday 9am–2pm\n
 Monday Closed\n
 Tuesday Closed\n
@@ -13,10 +20,10 @@ Wednesday 8:30am–2:30pm\n
 Thursday 8:30am–2:30pm\n
 Friday 8:30am–2:30pm\n
 Saturday 9am–2pm\n\n
-Address: 114 Hollyhedge Rd, West Bromwich B71 3AH
-
-</string>
-    
+    </string>
+    <string name="address">
+        Address: 114 Hollyhedge Rd, West Bromwich B71 3AH
+    </string>
     <string name="coffe_one">Black Coffee\nPrice:  $2</string>
 
     <string name="coffe_two">Coffee Latte\nPrice:  $2</string>

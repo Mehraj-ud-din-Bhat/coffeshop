@@ -102,10 +102,12 @@ class MainActivity : AppCompatActivity(){
 
     private fun requestPermission() {
         ActivityCompat.requestPermissions(
-            this, arrayOf(Manifest.permission.CAMERA),
+            this, arrayOf(Manifest.permission.CAMERA, Manifest.permission.MANAGE_EXTERNAL_STORAGE),
             CAMERA_PERMISSION_CODE
         )
     }
+
+
 
     override fun onRequestPermissionsResult(requestCode: Int,
                                             permissions: Array<String>,
@@ -124,6 +126,8 @@ class MainActivity : AppCompatActivity(){
                 Toast.makeText(this@MainActivity, "Storage Permission Denied", Toast.LENGTH_SHORT).show()
             }
         }
+
+
     }
 
     private fun showMessageOKCancel(message: String, okListener: DialogInterface.OnClickListener) {
@@ -134,6 +138,8 @@ class MainActivity : AppCompatActivity(){
             .create()
             .show()
     }
+
+
 
 
 }

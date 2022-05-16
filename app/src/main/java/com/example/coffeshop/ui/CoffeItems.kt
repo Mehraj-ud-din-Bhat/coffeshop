@@ -1,10 +1,13 @@
 package com.example.coffeshop.ui
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.coffeshop.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -21,6 +24,7 @@ class CoffeItems : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+     var  rvCoffee: RecyclerView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +39,28 @@ class CoffeItems : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_coffe_items, container, false)
+       var v= inflater.inflate(R.layout.fragment_coffe_items, container, false)
+        rvCoffee=v.findViewById(R.id.coffeeItemsRv)
+
+        return  v;
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        initRecycler()
+    }
+    fun initRecycler()
+    {
+        var list:ArrayList<Coffee> = ArrayList();
+        list.add(Coffee("Coffee Latte\n Price $2",(activity as Context).getDrawable(R.drawable.coffe_latte)))
+        list.add(Coffee("Cappuccino \n Price $2",(activity as Context).getDrawable(R.drawable.capp)))
+        list.add(Coffee("Espresso \n Price $2",(activity as Context).getDrawable(R.drawable.espresso)))
+        list.add(Coffee("Black Coffee\n Price $2",(activity as Context).getDrawable(R.drawable.black_coffe)))
+        var adapter:CoffeListAdapter= CoffeListAdapter(list,activity as Context);
+        rvCoffee?.adapter=adapter
+        rvCoffee?.layoutManager=LinearLayoutManager(activity)
+
     }
 
     companion object {
