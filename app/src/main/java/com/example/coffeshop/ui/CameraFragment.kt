@@ -134,7 +134,6 @@ class CameraFragment : Fragment() {
         )
         // This location works best if you want the created images to be shared
         // between applications and persist after your app has been uninstalled.
-
         // Create the storage directory if it does not exist
         mediaStorageDir.apply {
             if (!exists()) {
